@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit route</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="row col-8 offset-3 mt-5">
+
+        <h1>This is about  of user : <span class="text-success"><%= user.email %></span></h1> 
+
+        <form class="mt-3" method="post" action="/users/<%= user.id%>?_method=PATCH ">
+
+            <div class="mb-3 col-8">
+                <label for="textarea" class="form-label">Username</label>
+                <textarea name="username" class="form-control" id="textarea" placeholder="" ><%= user.username %></textarea>
+                
+            </div>
+            <div class="mb-3 col-8">
+                <label for="password" class="form-label">password</label>
+                <input type="password" name="password" placeholder="enter your password" class="form-control" id="password">
+          </div>
+
+          <button class="btn btn-primary" >Edit</button>
+        
+    </form>
+
+</div>
+</body>
+</html>
+
